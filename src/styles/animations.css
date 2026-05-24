@@ -1,0 +1,111 @@
+
+/* =========================
+   GLOBAL ANIMATIONS
+========================= */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* =========================
+   UTILITY ANIMATION CLASSES
+========================= */
+
+.fade-in {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+.slide-left {
+  animation: slideInLeft 0.5s ease forwards;
+}
+
+.slide-right {
+  animation: slideInRight 0.5s ease forwards;
+}
+
+.pop {
+  animation: pop 0.4s ease forwards;
+}
+
+/* =========================
+   HOVER EFFECTS
+========================= */
+
+.hover-lift {
+  transition: all 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   BUTTON ANIMATION
+========================= */
+
+.btn-animated {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-animated:hover {
+  transform: scale(1.03);
+  opacity: 0.9;
+}
+
+/* =========================
+   PAGE LOAD EFFECT
+========================= */
+
+.page-enter {
+  animation: fadeIn 0.8s ease;
+}
